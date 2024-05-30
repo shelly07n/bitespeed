@@ -12,7 +12,7 @@ export class AppController {
   }
 
   @Get('identify')
-  async identifyCustomer(@Query() RequestBody: RequestBody) {
+  async identifyCustomer(@Body() RequestBody: RequestBody) {
     return await this.appService.identifyCustomer(RequestBody)
   }
 
