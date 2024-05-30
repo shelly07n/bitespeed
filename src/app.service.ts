@@ -92,7 +92,7 @@ export class AppService {
       const isDuplicateAccount = await this.contactModel.findOne({
         where: whereCondition
       })
-      return isDuplicateAccount.phoneNumber == identifyMobile || isDuplicateAccount.email == identifyEmail ? true : isDuplicateAccount.phoneNumber != null && isDuplicateAccount.email != null ? true : false
+      return isDuplicateAccount?.phoneNumber == identifyMobile || isDuplicateAccount?.email == identifyEmail ? true : isDuplicateAccount?.phoneNumber != null && isDuplicateAccount?.email != null ? true : false
     } catch (error) {
       console.log(error);
     }

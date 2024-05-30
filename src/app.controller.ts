@@ -11,7 +11,7 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('identify')
+  @Post('identify')
   async identifyCustomer(@Body() RequestBody: RequestBody) {
     return await this.appService.identifyCustomer(RequestBody)
   }
